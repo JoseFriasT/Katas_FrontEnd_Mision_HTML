@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Bakery</title>
+</head>
+<body>
+    <center>
+        </div><img src="assets/img/Rocket_Cake.png" alt="logo rocket cake" height=”250” width = "250px" > 
+        <h1>Bienvenidos al viaje de sabores espaciales</h1>
+    </center>
+
+
+    <h2>Elige el sabor de tu pastel espacial</h2><br>
+    <input type="radio" id="sabor1" name="sabor" value="Chocolate">
+    <label for="sabor1">Chocolate--------------------------------------------$70</label><br>
+    <input type="radio" id="sabor2" name="sabor" value="Vainilla">
+    <label for="sabor2">Vainilla-----------------------------------------------$50</label><br>
+    <input type="radio" id="sabor3" name="sabor" value="Fresa">
+    <label for="sabor3">Fresa--------------------------------------------------$50</label><br>
+    <input type="radio" id="sabor4" name="sabor" value="RedVelvet">
+    <label for="sabor4">Red Velvet-------------------------------------------$90</label><br><br><br>
+
+
+    <h2>Elige los adornos de tu pastel espacial</h2><br>
+    <input type="checkbox" id="adorno1" name="adorno1" value="Flores">
+    <label for="adorno1">Flores------------------------------------------------$30</label><br>
+    <input type="checkbox" id="adorno2" name="adorno2" value="Estrellas">
+    <label for="adorno2">Estrellas---------------------------------------------$30</label><br>
+    <input type="checkbox" id="adorno3" name="adorno3" value="Moños">
+    <label for="adorno3">Moños-----------------------------------------------$30</label><br>
+    <input type="checkbox" id="adorno4" name="adorno4" value="Fondant">
+    <label for="adorno4">Fondant----------------------------------------------$90</label><br>
+    <input type="checkbox" id="adorno5" name="adorno5" value="Velas">
+    <label for="adorno5">Velas-------------------------------------------------$50</label><br><br>
+
+
+    <h2>Formulario de cliente</h2>
+    <form action="/accion.js" id="form1" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+        <label for="apellido">Apellido:</label>
+         <input type="text" id="apellido" name="apellido" form="form1"> <br><br>     
+         <label for="nombre">Teléfono:</label>
+         <input type="text" id="telefono" name="telefono"><br><br>
+         <label for="nombre">Correo eléctronico:</label>
+         <input type="text" id="correo" name="correo"><br><br>
+         <label for="Input1"> Descripición del pastel</label> <br>
+         <textarea id="descripcion" name="descripcion" cols="60" rows="6"> </textarea><br><br>
+        <input type="submit" value="Enviar Formulario">
+        <input type="Reset">
+    </form>
+    
+</body>
+</html>
