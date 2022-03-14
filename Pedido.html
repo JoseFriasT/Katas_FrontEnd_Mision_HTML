@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Bakery</title>
+</head>
+<body>
+    <center>
+        </div><img src="assets/img/Rocket_Cake.png" alt="logo rocket cake" height=”250” width = "250px" > 
+        <h1>Bienvenidos al viaje de sabores espaciales</h1><br>
+    </center>
+
+<dd>
+    <h2>Elige el sabor de tu pastel espacial</h2>
+    <p>Elige hasta 2 diferentes sabores</p>
+    <form  id="f1">
+    <input type="checkbox" id="sabor1" name="sabor" value="Chocolate" class="check" onchange="if (this.checked) sumar(70); else restar(70)">
+    <label for="sabor1">Chocolate Galáctico--------------------------------------------$70</label><br>
+    <input type="checkbox" id="sabor2" name="sabor" value="Vainilla" precio="50" class="check" onchange="if (this.checked) sumar(50); else restar(50)">
+    <label for="sabor2">Vainilla Boreal---------------------------------------------------$50</label><br>
+    <input type="checkbox" id="sabor3" name="sabor" value="Fresa" class="check" onchange="if (this.checked) sumar(50); else restar(50)">
+    <label for="sabor3">Fresa Lunar------------------------------------------------------$50</label><br>
+    <input type="checkbox" id="sabor4" name="sabor" value="RedVelvet" class="check" onchange="if (this.checked) sumar(90); else restar(90)">
+    <label for="sabor4">Red Velvet Fugaz-----------------------------------------------$90</label><br>
+    <input type="checkbox" id="sabor5" name="sabor" value="Macadamia" class="check" onchange="if (this.checked) sumar(95); else restar(95)">
+    <label for="sabor5">Macadamia Cometa--------------------------------------------$95</label><br>
+    <input type="checkbox" id="sabor6" name="sabor" value="Oreo" class="check" onchange="if (this.checked) sumar(100); else restar(100)">
+    <label for="sabor6">Oreo Cósmico---------------------------------------------------$100</label><br><br><br>
+    </form>
+ </dd>
+
+ <dd>
+    <h2>Elige los adornos de tu pastel espacial</h2>
+    <form  id="f1">
+    <input type="checkbox" id="adorno1" name="adorno1" value="Flores" onchange="if (this.checked) sumar(30); else restar(30)">
+    <label for="adorno1">Flores------------------------------------------------$30</label><br>
+    <input type="checkbox" id="adorno2" name="adorno2" value="Estrellas" onchange="if (this.checked) sumar(30); else restar(30)">
+    <label for="adorno2">Estrellas---------------------------------------------$30</label><br>
+    <input type="checkbox" id="adorno3" name="adorno3" value="Moños" onchange="if (this.checked) sumar(30); else restar(30)">
+    <label for="adorno3">Moños-----------------------------------------------$30</label><br>
+    <input type="checkbox" id="adorno4" name="adorno4" value="Fondant" onchange="if (this.checked) sumar(90); else restar(90)">
+    <label for="adorno4">Fondant----------------------------------------------$90</label><br>
+    <input type="checkbox" id="adorno5" name="adorno5" value="Velas" onchange="if (this.checked) sumar(50); else restar(50)">
+    <label for="adorno5">Velas-------------------------------------------------$50</label><br><br>
+    </form>
+ </dd>
+ <dd>
+    <h3>Total: <form name=formulario>
+    
+            <output type="text" name="total" value="0">
+            </form> </h3>
+    
+
+</dd>
+
+ <dd>
+    <h2>Formulario de cliente</h2>
+    
+    <form action="/accion.js" id="form1" method="post">
+    
+   <ul>
+        <li>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br><br>
+        </li>
+
+        <li>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" form="form1"> <br><br> 
+        </li>    
+
+        <li>
+            <label for="nombre">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono"><br><br>
+        </li>
+
+        <li>
+            <label for="nombre">Correo eléctronico:</label>
+            <input type="text" id="correo" name="correo"><br><br>
+        </li>
+
+        <li>
+         <label for="Input1"> Descripición del pastel</label> <br>
+         <textarea id="descripcion" name="descripcion" cols="60" rows="6"> </textarea><br><br>
+        </li>
+        <input type="submit" value="Enviar Formulario" >
+        <input type="Reset">
+    </ul>
+
+    
+    </form>
+    <br>
+
+
+</dd>
+
+
+    <script>
+     
+    var intentos= document.getElementsByClassName("check");
+
+    var precio = document.getElementsByClassName("checked").attr;
+
+    for(var i=0;i<intentos.length;i++) {
+        intentos[i].addEventListener("click", function()
+        {
+
+            count=0;
+            for(var j=0;j<intentos.length;j++) 
+            {
+                if(intentos[j].checked)
+                    count++;
+                        if(count>2)
+                            {
+                                event.preventDefault();
+                            }
+            };
+        
+            precio
+
+        });
+    };
+
+var total=0;
+
+function sumar(valor) {
+total += valor;
+document.formulario.total.value=total;
+}
+     
+function restar(valor) {
+total-=valor;
+document.formulario.total.value=total;
+}
+    </script>
+     
+  
+</body>
+</html>
+
